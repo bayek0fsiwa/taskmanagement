@@ -1,0 +1,9 @@
+alembic
+asyncpg
+fastapi[standard]
+gunicorn
+pydantic-settings
+python-json-logger
+psycopg2-binary
+sqlmodel
+ruff

@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: postgres:18
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: dbuser
+      POSTGRES_PASSWORD: dbpassword
+      POSTGRES_DB: taskmanagementsystem
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - taskmanagentsystem-network
+
+
+volumes:
+  postgres_data:
+
+networks:
+  taskmanagentsystem-network:
+    driver: bridge
